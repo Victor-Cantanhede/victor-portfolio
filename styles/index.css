@@ -1,0 +1,341 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --backColor001: #0a0a0a;
+
+    --whiteColor001: #f5f5f5;
+
+    --blueColor001: #0000ff;
+    --blueColor002: #0000ce;
+
+    --fontColorWhite001: #ffffff;
+    --fontColorWhite002: #e6e6e6;
+}
+
+@keyframes containerIn {
+    from {
+        opacity: 0;
+        transform: translateY(5rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    height: 100dvh;
+    max-height: 100dvh;
+    width: 100vw;
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+body {
+    height: 100dvh;
+    width: 100vw;
+    overflow: auto;
+}
+
+main {
+    height: max-content;
+    min-height: 100%;
+}
+
+header {
+    height: 12dvh;
+    min-height: max-content;
+    width: 100%;
+    padding: 10px 20px;
+    position: fixed;
+    display: flex;
+
+    background-color: var(--backColor001);
+    color: white;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.500);
+    z-index: 9999;
+}
+
+.headerContainer {
+    flex-grow: 1;
+    min-height: max-content;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+ul.optionsContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+ul.optionsContainer li {
+    padding: 0 5px;
+    display: flex;
+    list-style: none;
+}
+
+ul.optionsContainer li.optionsDefault {
+    border-bottom: 2px solid transparent;
+    transition: 0.2s;
+}
+
+ul.optionsContainer li.optionsDefault:hover {
+    border-bottom: 2px solid var(--blueColor001);
+    transition: 0.2s;
+}
+
+ul.optionsContainer li a {
+    color: var(--fontColorWhite001);
+    text-decoration: none;    
+}
+
+#contactButton {
+    width: 120px;
+    padding: 10px;
+    border: 2px solid var(--blueColor001);
+    border-radius: 25px;
+
+    text-align: center;
+    background-color: var(--blueColor001);
+    box-shadow: 0 3px 20px var(--blueColor002);
+    transition: 0.2s;
+}
+
+#contactButton:hover {
+    background-color: var(--backColor001);
+    transition: 0.2s;
+}
+
+.section01 {
+    height: 100dvh;
+    padding: 5%;
+
+    display: flex;
+    align-items: center;
+
+    color: var(--fontColorWhite001);
+    background-image: url("../public/img001.jpg");
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    filter: grayscale(60%);
+}
+
+.section01 > div {
+    width: 600px;
+    padding: 20px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 15px;
+
+    color: var(--fontColorWhite002);
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+
+    animation: containerIn 0.5s linear;
+}
+
+.buttonContainer01 {
+    margin-top: 20px;
+
+    flex-grow: 1;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+}
+
+.genericBtn01 {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid var(--fontColorWhite002);
+    border-radius: 15px;
+
+    color: var(--fontColorWhite002);
+    text-align: center;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.genericBtn01:hover {
+    background-color: var(--fontColorWhite002);
+    color: #636363;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    transition: 0.2s;
+}
+
+.section002 {
+    height: max-content;
+    padding: 40px 20px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    gap: 40px;
+
+    background-color: var(--whiteColor001);
+}
+
+.section002 > h1 {
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(212, 212, 212);
+}
+
+.containerCards001 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card001 {
+    height: 200px;
+    width: 180px;
+    padding: 10px;
+    border-radius: 15px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    scale: 0.9;
+    transition: 0.2s;
+}
+
+.card001:hover {
+    transform: translateY(-1rem);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: 0.2s;
+}
+
+.card001 > h3 {
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    color: var(--backColor001);
+}
+
+.imgCard {
+    height: 60px;
+    width: 60px;
+    background-size: cover;
+}
+
+#htmlImg {
+    background-image: url("../public/htmlImg.png");
+}
+
+#cssImg {
+    background-image: url("../public/cssImg.png");
+}
+
+#javascriptImg {
+    background-image: url("../public/icons8-javascript-240.png");
+}
+
+#typescriptImg {
+    background-image: url("../public/icons8-typescript-240.png");
+}
+
+#nodeImg {
+    background-image: url("../public/icons8-nodejs-240.png");
+}
+
+#reactImg {
+    background-image: url("../public/icons8-react-200.png");
+}
+
+#nextImg {
+    background-image: url("../public/icons8-next.js-240.png");
+}
+
+.section003 {
+    height: 80dvh;
+    padding: 40px 20px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 40px;
+
+    color: white;
+    background-color: var(--backColor001);
+}
+
+.section003 > h1 {
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(212, 212, 212);
+}
+
+.section004 {
+    height: max-content;
+    padding: 40px 20px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 40px;
+
+    color: white;
+    background-color: black;
+}
+
+.section004 > h1 {
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(212, 212, 212);
+}
+
+.card002 {
+    height: 200px;
+    width: 180px;
+    padding: 10px;
+    border-radius: 15px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    scale: 0.9;
+}
+
+.card002 a {
+    color: white;
+}
+
+#wppImg {
+    background-image: url("../public/icons8-whatsapp-240.png");
+}
+
+#githubImg {
+    background-image: url("../public/icons8-github-240.png");
+}
+
+#linkedinImg {
+    background-image: url("../public/icons8-linkedin-240.png");
+}
+
+#emailImg {
+    background-image: url("../public/icons8-gmail-240.png");
+}
+
+#card002Email {
+    width: max-content;
+}
